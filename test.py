@@ -20,7 +20,7 @@ async def square(ctx, arg): # The name of the function is the name of the comman
 
 @bot.command()
 async def ping(ctx): # The name of the function is the name of the command
-    await ctx.send("pong") # ctx.send sends text in chat
+    await ctx.send("pong GITHUB (render)") # ctx.send sends text in chat
     
 @bot.event
 async def on_message(message):
