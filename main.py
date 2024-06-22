@@ -1,12 +1,10 @@
 import discord
 from discord.ext import commands
-
+from dotenv import load_dotenv
+import os 
+load_dotenv()
 # Initialize bot
 intents = discord.Intents.default()
-intents.message_content = True  # Enable the Message Content Intent
-
-# Initialize bot
-intents = discord.Intents.all()
 intents.members = True  # Required to fetch member info
 bot = commands.Bot(command_prefix='!', intents=intents)
 
@@ -37,5 +35,5 @@ async def on_message(message):
         await message.channel.send(f'Goodbye {message.author}')
 
     await bot.process_commands(message)
-
+TOKEN = os.getenv("TOKEN")
 bot.run(TOKEN)
