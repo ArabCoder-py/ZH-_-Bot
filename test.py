@@ -8,7 +8,6 @@ intents = discord.Intents.default()
 intents.members = True  # Required to fetch member info
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# TOKEN = "MTI1NDAxMzU3NzAyMzQ1NTMwMw.Gc-JPP.EC7PPdhO0xF0SSmixoDo285pAWP7C2zZwzQdek" # test Token
 # Runs when Bot Succesfully Connects
 @bot.event
 async def on_ready():
