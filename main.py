@@ -10,7 +10,7 @@ intents = discord.Intents.all()
 intents.members = True  # Required to fetch member info
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-TOKEN = ""
+TOKEN = "MTI1NDAxMzU3NzAyMzQ1NTMwMw.Gc-JPP.EC7PPdhO0xF0SSmixoDo285pAWP7C2zZwzQdek" # test Token
 # Runs when Bot Succesfully Connects
 @bot.event
 async def on_ready():
@@ -20,6 +20,10 @@ async def on_ready():
 async def square(ctx, arg): # The name of the function is the name of the command
     print(arg) # this is the text that follows the command
     await ctx.send(int(arg) ** 2) # ctx.send sends text in chat
+
+@bot.command()
+async def ping(ctx): # The name of the function is the name of the command
+    await ctx.send("pong") # ctx.send sends text in chat
     
 @bot.event
 async def on_message(message):
