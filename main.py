@@ -12,7 +12,11 @@ import logging
 import asyncio
 from dotenv import load_dotenv
 load_dotenv()
+##
+from keep_alive import keep_alive 
 
+keep_alive()
+##
 # Initialize bot
 intents = discord.Intents.default()
 intents.members = True  # Required to fetch member info
